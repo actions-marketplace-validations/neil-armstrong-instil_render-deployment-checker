@@ -10,7 +10,7 @@ This action allows you to wait for a render.com deployment to finish when using 
 
 ### Use the action in your pipeline
 ```
-- uses: neil-armstrong-instil/render-deployment-checker
+- uses: neil-armstrong-instil/render-deployment-checker@v1
   env:
     RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
   with:
@@ -42,7 +42,7 @@ jobs:
         uses: ./.github/reusable-actions/setup-project
 
       - name: Wait for webapp deployment
-        uses: neil-armstrong-instil/render-deployment-checker
+        uses: neil-armstrong-instil/render-deployment-checker@v1
         env:
           RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
         with:
@@ -50,7 +50,7 @@ jobs:
           deploymentName: "Webapp"
           
       - name: Wait for api deployment
-        uses: neil-armstrong-instil/render-deployment-checker
+        uses: neil-armstrong-instil/render-deployment-checker@v1
         env:
           RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
         with:
