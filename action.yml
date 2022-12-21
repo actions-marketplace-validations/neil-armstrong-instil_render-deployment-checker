@@ -1,4 +1,4 @@
-name: "instil/render-deployment-checker"
+name: "neil-armstrong-instil/render-deployment-checker"
 description: "Checks if a render deployment has been completed"
 author: "instil.co"
 inputs:
