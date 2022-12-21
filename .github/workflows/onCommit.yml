@@ -1,0 +1,25 @@
+name: Run on every commit
+
+on: [ push ]
+
+jobs:
+  commitChecks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone project
+        uses: actions/checkout@v3
+
+      - name: Setup project
+        uses: ./.github/reusable-actions/setup-project
+
+      - name: Run checks
+        uses: ./.github/reusable-actions/check-project
+
+#      - name: Run this project
+#        uses: "./"
+#        env:
+#          RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
+#        with:
+#          serviceId: "srv-cdqc0larrk09t4b2bd50"
+#          deploymentName: "Webapp"

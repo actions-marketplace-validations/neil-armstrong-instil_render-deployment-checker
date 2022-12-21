@@ -1,0 +1,13 @@
+name: "instil/render-deployment-checker"
+description: "Checks if a render deployment has been completed"
+author: "instil.co"
+inputs:
+  serviceId:
+    required: true
+    description: "The service id of the deployment you want to check"
+  deploymentName:
+    required: true
+    description: "The name of the deployment you want to check (makes logs easier to read)"
+runs:
+  using: "node16"
+  main: "dist/src/CheckDeployments.js"
